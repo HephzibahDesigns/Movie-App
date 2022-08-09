@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+
+:root {
+  --primary: #032541;
+  --secondary: #21d07a;
+  --white: #fff;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container{
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container{
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+    width: 1170px;
+  }
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nav Page */
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary);
+}
+
+.nav .link{
+  text-decoration: none;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  padding: 0 10px;
+}
+
+.nav .nav-links{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links a{
+  text-decoration: none;
+  padding: 0 20px;
+  margin: 2px 5px;
+  list-style: none;
+  color: var(--white);
+  margin-right: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+
+.nav-links .btn{
+  background-color: var(--secondary);
+  padding: 4px 8px;
+  color: var(--primary);
+  border-radius: 2px;
+}
+
+.nav-links a:hover{
+  opacity: 0.7;
+}
+
+/* Add Page */
+
+.add-input{
+  display: flex;
+  padding: 50px 0;
+  max-width: 600px;
+  margin: 0 auto;
+  
+}
+
+/* Note */
+.add-input .search-bar{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.add-input .search-bar input{ 
+  width: 100%;
+  outline: none;
+  padding: 7px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.results{
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.results li{
+  list-style: none;
+}
+
+
+.movie-card{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.movie-card .wrapper img{
+  width: 75px;
+  height: 113px;
+  background-color: #dbdada;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: block;
+  color: transparent;
+}
+
+.movie-card .movie-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-card .movie-info .title{
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.movie-card .movie-info .release-date{
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--primary);
+  margin: 0;
+}
+
+.movie-card .movie-control .btn{
+  background-color: var(--secondary);
+  padding: 7px 8px;
+  color: var(--primary);
+  border-radius: 3px;
+  border: none;
+  font-weight: 500;
+}
+
+
+
+
+
+
