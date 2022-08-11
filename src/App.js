@@ -6,10 +6,12 @@ import Add from './Components/Add';
 import Watched from './Components/Watched';
 import './FontAwesome/css/all.min.css';
 import Watchlist from './Components/Watchlist';
+import {MovieProvider} from "./Context/GlobalContext"
 
 function App() {
   return (
     <div className="App">
+    <MovieProvider>
      <BrowserRouter>
      <Nav />
      <Routes>
@@ -20,6 +22,7 @@ function App() {
 
      </Routes>
      </BrowserRouter>
+     </MovieProvider>
     </div>
   );
 }

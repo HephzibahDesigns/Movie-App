@@ -1,7 +1,7 @@
 import React from "react";
 
 const SearchedMovies = ({movie}) => {
-  return (
+  return (  
      <div className="movie-card">
        <div className="wrapper">
          {movie.poster_path ? (
@@ -13,7 +13,7 @@ const SearchedMovies = ({movie}) => {
 
        <div className="movie-info">
          <div className="header">
-           <h3 className="title">
+           <h3 className="title"> 
              {movie.title} </h3>
 
            <h4 className="release-date"> 
