@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../Context/GlobalContext";
 
 const SearchedMovies = ({movie}) => {
+  const {addMovieToWatchlist, watchlist}  = useContext(GlobalContext)
+
+  // to find if there's a movie 
+  let storedMovie = watchlist.find(o => o.id === movie.id);
+  const disableWatchlist = storedMovie ? true : false
+
   return (  
      <div className="movie-card">
        <div className="wrapper">
@@ -21,7 +28,9 @@ const SearchedMovies = ({movie}) => {
          </div>
 
          <div className="movie-control">
-           <button className="btn">
+           <button className="btn"
+            disabled = {disableWatchlist}
+            onClick={() => addMovieToWatchlist(movie)}>
              Add to Watchlist
            </button>
          </div>

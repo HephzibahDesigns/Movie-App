@@ -10,7 +10,7 @@ import {MovieProvider} from "./Context/GlobalContext"
 
 function App() {
   return (
-    <div className="App">
+    <div>
     <MovieProvider>
      <BrowserRouter>
      <Nav />
